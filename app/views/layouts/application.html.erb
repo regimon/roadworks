@@ -7,8 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<nav class="navbar navbar-default",>
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Roadworks in Aberdeen</a>
+      <button type="button" class="btn btn-default navbar-btn">Sign in</button>
+    </div>
+  </div>
+</nav>
 
-<%= yield %>
-
+    <div id="main-container" class="container-fluid">
+      <div class="row">
+        <div class="col-xs-9">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+    
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+  <div class="container">
+    <span class="navbar-text navbar-right">Roadworks in Aberdeen</span>
+    <span class="navbar-text navbar-left">Updated: 08/04/2015</span>
+  </div>
+</nav>
 </body>
 </html>
