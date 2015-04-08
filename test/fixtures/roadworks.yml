@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyText
+  startdate: MyString
+  enddate: MyString
+  latitude: 1.5
+  longitude: 1.5
+  tags: MyString
+  submitteddate: MyString
+
+two:
+  description: MyText
+  startdate: MyString
+  enddate: MyString
+  latitude: 1.5
+  longitude: 1.5
+  tags: MyString
+  submitteddate: MyString

@@ -1,0 +1,45 @@
+<%= form_for(@roadwork) do |f| %>
+  <% if @roadwork.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@roadwork.errors.count, "error") %> prohibited this roadwork from being saved:</h2>
+
+      <ul>
+      <% @roadwork.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :startdate %><br>
+    <%= f.text_field :startdate %>
+  </div>
+  <div class="field">
+    <%= f.label :enddate %><br>
+    <%= f.text_field :enddate %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :tags %><br>
+    <%= f.text_field :tags %>
+  </div>
+  <div class="field">
+    <%= f.label :submitteddate %><br>
+    <%= f.text_field :submitteddate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

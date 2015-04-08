@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @roadwork.description %>
+</p>
+
+<p>
+  <strong>Startdate:</strong>
+  <%= @roadwork.startdate %>
+</p>
+
+<p>
+  <strong>Enddate:</strong>
+  <%= @roadwork.enddate %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @roadwork.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @roadwork.longitude %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @roadwork.tags %>
+</p>
+
+<p>
+  <strong>Submitteddate:</strong>
+  <%= @roadwork.submitteddate %>
+</p>
+
+<%= link_to 'Edit', edit_roadwork_path(@roadwork) %> |
+<%= link_to 'Back', roadworks_path %>
