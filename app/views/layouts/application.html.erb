@@ -13,6 +13,7 @@
       <a class="navbar-brand" href="/">Roadworks in Aberdeen</a>
 	  <% if user_signed_in? %>	
 		<%= link_to 'Logout', destroy_user_session_path, :method => :delete, class: 'btn btn-default navbar-btn'%>
+		<%= link_to 'Roadworks map', controller: "maps", class: 'btn btn-default navbar-btn'%>
 	  <% else %>
 		<%= link_to 'Login', new_user_session_path, class: 'btn btn-default navbar-btn'%>
 	  <%end%>
