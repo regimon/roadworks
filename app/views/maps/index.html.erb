@@ -2,8 +2,11 @@
   <%= javascript_include_tag "gmaps.js" %>
 <% end %>
 
-  <body>
     <div id="map-container">
 		<div id="map-canvas"></div>
 	</div>
-  </body>
+	
+<form action ="/roadworks/search" method="post">
+<input name = "key" type="input" />
+<input value="Send" type="submit"/>
+</form> 

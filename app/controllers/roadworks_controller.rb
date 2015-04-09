@@ -60,6 +60,10 @@ class RoadworksController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def search
+    @roadworks = Roadwork.search(params[:key])
+  end  
 
   private
     # Use callbacks to share common setup or constraints between actions.

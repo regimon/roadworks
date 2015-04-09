@@ -17,7 +17,10 @@
 	  <% else %>
 		<%= link_to 'Login for Maps!', new_user_session_path, class: 'btn btn-default navbar-btn'%>
 	  <%end%>
-	  
+	  <form action ="/roadworks/search" method="post">
+		<input name = "key" type="input" />
+		<input value="Search" type="submit"/>
+	  </form> 
     </div>
   </div>
 </nav>
@@ -38,3 +41,5 @@
 </nav>
 </body>
 </html>
+
+
