@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+scope "(:locale)", locale: /en|nl/ do
   devise_for :users
   resources :roadworks
   resources :maps
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
   root 'roadworks#index'
   
   post '/roadworks/search' => 'roadworks#search'
+ end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
