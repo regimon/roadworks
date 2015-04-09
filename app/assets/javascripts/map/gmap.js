@@ -6,6 +6,9 @@ function initialize() {
 
   var map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
+      
+  var trafficLayer = new google.maps.TrafficLayer();
+      trafficLayer.setMap(map);
 }
 
 function loadScript() {
