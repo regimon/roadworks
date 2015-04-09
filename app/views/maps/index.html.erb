@@ -1,24 +1,32 @@
-<!DOCTYPE html>
-<html>
+
   <head>
-    <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwIQb4oH28IO6vYiKf4x9WUtJFqqxKAPc">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <script>
+function initialize() {
+  var mapOptions = {
+    zoom: 12,
+    center: new google.maps.LatLng(57.1526, -2.110)
+  };
+
+  var map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+}
+
+function loadScript() {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' +
+      '&signed_in=true&callback=initialize';
+  document.body.appendChild(script);
+}
+
+window.onload = loadScript;
+
     </script>
-    <script type="text/javascript">
-      function initialize() {
-        var mapOptions = {
-          center: { lat: 57.1526, lng: -2.1100},
-          zoom: 12
-        };
-        var map = new google.maps.Map(document.getElementById('map-canvas'),
-            mapOptions);
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
+  
   </head>
   <body>
-<div id="map-container">
-  <div id="map-canvas"></div>
-</div>
+    <div id="map-container">
+		<div id="map-canvas"></div>
+	</div>
   </body>
-</html>
