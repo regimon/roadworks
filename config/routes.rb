@@ -8,7 +8,18 @@ scope "(:locale)", locale: /en|nl/ do
   root 'roadworks#index'
   
   post '/roadworks/search' => 'roadworks#search'
+  
+  #  class OnlyAjaxRequests
+  #  def matches?(request)
+  #    request.xhr?
+  #  end
+  #end
+  
+  #match '/ajax/getrws' => 'roadworks#rtrnjsonroadworks', :constraints => OnlyAjaxRequests.new, via: :post, defaults: {format: 'json'}
+  
  end
+ 
+ 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
