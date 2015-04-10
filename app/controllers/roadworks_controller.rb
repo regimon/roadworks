@@ -63,7 +63,11 @@ class RoadworksController < ApplicationController
   
   def search
     @roadworks = Roadwork.search(params[:key])
-  end  
+  end 
+  
+  def rtrnjsonroadworks
+		render json: Roadwork.all #roadworks in db in json format
+  end 
 
   private
     # Use callbacks to share common setup or constraints between actions.
