@@ -9,6 +9,8 @@ function initialize() {
       
   var trafficLayer = new google.maps.TrafficLayer();
       trafficLayer.setMap(map);
+      
+
 }
 
 function loadScript() {
@@ -20,3 +22,4 @@ function loadScript() {
 }
 
 window.onload = loadScript;
+
