@@ -20,8 +20,10 @@ function initialize() {
 			url: '/ajax/getrws',
 			dataType: 'json'
 		}).success(function(rws){	
+			console.log(rws);
 			// Loops over rws, adding them to the map
-			rws.forEach(function(rw){
+		    rws.forEach(function(rw){
+				console.log(rw);
 				// Creates marker for current rw
 				rwMarker = new google.maps.Marker({
 					position: new google.maps.LatLng(parseFloat(rw.latitude),parseFloat(rw.longitude)),
