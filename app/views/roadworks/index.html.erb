@@ -26,11 +26,11 @@
        <!-- <td><%= roadwork.longitude %></td> -->
         <td><%= roadwork.tags %></td>
         <td><%= roadwork.submitteddate %></td>
+        <% if current_user && current_user.admin?%>
         <td><%= link_to 'Show', roadwork, class: 'btn btn-link'%></td>
-			<% if current_user && current_user.admin?%>
         <td><%= link_to 'Edit', edit_roadwork_path(roadwork) , class:'btn btn-link'%></td>
         <td><%= link_to 'Destroy', roadwork, method: :delete, data: { confirm: 'Are you sure?' } ,class: 'btn btn-danger'%></td>
-			<%end%>
+		<%end%>
       </tr>
     <% end %>
   </tbody>

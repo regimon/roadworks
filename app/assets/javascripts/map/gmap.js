@@ -1,5 +1,7 @@
 
 function initialize() {
+
+  
   var mapOptions = {
     zoom: 12,
     center: new google.maps.LatLng(57.1526, -2.110)
@@ -10,7 +12,26 @@ function initialize() {
       
   var trafficLayer = new google.maps.TrafficLayer();
       trafficLayer.setMap(map);
-      
+  
+
+ 
+  $.ajax({
+			type: "GET",
+			url: '/ajax/getrws',
+			dataType: 'json'
+		}).success(function(rws){	
+			// Loops over rws, adding them to the map
+			rws.forEach(function(rw){
+				// Creates marker for current rw
+				rwMarker = new google.maps.Marker({
+					position: new google.maps.LatLng(parseFloat(rw.latitude),parseFloat(rw.longitude)),
+					map	: map,
+					title	: "hello",
+					icon	: '/images/closedroad.png'
+					}
+				)
+			})
+		 });
 
 }
 

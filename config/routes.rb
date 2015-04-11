@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-
+ class OnlyAjaxRequests
+    def matches?(request)
+      request.xhr?
+    end
+  end
+  
+ match '/ajax/getrws' => 'roadworks#rtrnjsonroadworks', :constraints => OnlyAjaxRequests.new, via: :get, defaults: {format: 'json'}
 scope "(:locale)", locale: /en|nl/ do
   devise_for :users
   resources :roadworks
@@ -9,13 +15,7 @@ scope "(:locale)", locale: /en|nl/ do
   
   post '/roadworks/search' => 'roadworks#search'
   
-  #  class OnlyAjaxRequests
-  #  def matches?(request)
-  #    request.xhr?
-  #  end
-  #end
-  
-  #match '/ajax/getrws' => 'roadworks#rtrnjsonroadworks', :constraints => OnlyAjaxRequests.new, via: :post, defaults: {format: 'json'}
+ 
   
  end
  

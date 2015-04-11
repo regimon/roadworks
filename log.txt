@@ -1,0 +1,34 @@
+* fe2e081 : started ajax load for markers, fixed bug where map would only load on refresh
+* e009428 : changed locale to en and updated roadworks
+* bb44e4e : switch db to postgres
+*   0c6dfda : Merge branch 'tests'
+|\  
+| * ccb40bd : set up for devise tests
+* | 366fc2e : merging internationalization. not fully functional.
+|/  
+* aff87db : added authentication to map controller for security
+* 0ba572a : search added
+* e64c7bf : beautified frontpage
+*   369711d : merging google maps to master
+|\  
+| * 737eb89 : added traffic live data to map
+| * d8923fc : maps javascript moved to gmaps.js
+| * 19ca652 : map loads asynchronously after page loads
+| * e698de1 : map centres on Aberdeen rather than fishing fleet in North Sea
+| *   cac8ae4 : Merge branch 'master' of https://github.com/regimon/roadworks into googlemaps
+| |\  
+| * | 4e8dc7a : added generated maps controller
+* | | fa09726 : changed routes
+| |/  
+|/|   
+* | dfd7fff : added link for maps
+|/  
+* 64840d9 : added authentication on roadworks
+* 90f524f : overhauled frontend
+*   a9951bc : merge bootstrap
+|\  
+| * 87c0b2a : basic bootstrap config added
+* | 110cb7f : added roadworks opendata
+* | bdefe59 : added admins
+|/  
+* 545a8ca : initial commit with devise
