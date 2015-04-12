@@ -2,6 +2,12 @@
   <%= javascript_include_tag "gmaps.js" %>
 <% end %>
 
+<style>
+html { height: 100% }
+body { height: 100% }
+#map-container { height: 30% }
+</style>
+
 <div id="map-wrapper">
 	<div id="map-canvas"></div>
 	<script>initialize();</script>
